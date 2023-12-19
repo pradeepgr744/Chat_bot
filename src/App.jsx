@@ -72,7 +72,7 @@ const Chatbot = () => {
           >
             <button onClick={copy}
               className="flex justify-end w-[100%]"
-            ><img src="src/assets/copy_icon.svg" alt="" /></button>
+            ><img src="/static/images/copy_icon.svg" alt="" /></button>
             <pre ref={ref} className="whitespace-pre-line">{message.parts}</pre>
           </div>
         ))}
@@ -97,7 +97,7 @@ const Chatbot = () => {
               <span class="sr-only">Loading...</span>
             </div>:
           <button type="submit" className=" bg-blue-500 text-white w-[12%] flex justify-center h-auto items-center rounded-lg">
-          <img src="src/assets/send.svg" alt="" />
+          <img src="static/public/send.svg" alt="" />
         </button>  
         
         
