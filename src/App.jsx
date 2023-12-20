@@ -53,7 +53,7 @@ const Chatbot = () => {
  
 
   return (
-    <div className={`chatbot p-4 rounded-lg shadow-md h-[100dvh] flex flex-col text-lg sm-[100%]  md:w-[100%] xl:w-[80%] m-auto ${bgcolor ? "transition ease-in-out duration-300 bg-gray-800 " : "transition ease-in-out duration-300 bg-gray-200"}`}>
+    <div className={`chatbot p-4 rounded-lg shadow-md h-[100dvh] flex flex-col text-lg sm-[100%]  md:w-[100%] xl:w-[80%] m-auto ${bgcolor ? "transition ease-in-out duration-300 bg-[#283142] " : "transition ease-in-out duration-300 bg-gray-200"}`}>
       <header className={`flex items-center justify-between border-b pb-4 ${bgcolor ? "text-white border-white" : "text-black border-black"}`}>
         <h1 className="text-xl font-bold">Chatbot</h1>
         <label className="relative inline-flex items-center cursor-pointer">
@@ -66,13 +66,13 @@ const Chatbot = () => {
       <div className="conversation-area overflow-y-auto h-[300px] w-[100%] flex-grow ">
         {messages.map((message, index) => (
           <div
-            className={`message ${message.role === "user" ? "bg-blue-100" : "bg-gray-100"
+            className={`message ${message.role === "user" ? "bg-blue-100" : "bg-[#283142] text-white"
               }  p-4 rounded-lg my-2`}
             key={index}
           >
             <button onClick={copy}
               className="flex justify-end w-[100%]"
-            ><img src="/static/images/copy_icon.svg" alt="" /></button>
+            ><img src="/public/copy_icon.svg" alt="" /></button>
             <pre ref={ref} className="whitespace-pre-line">{message.parts}</pre>
           </div>
         ))}
@@ -97,7 +97,7 @@ const Chatbot = () => {
               <span class="sr-only">Loading...</span>
             </div>:
           <button type="submit" className=" bg-blue-500 text-white w-[12%] flex justify-center h-auto items-center rounded-lg">
-          <img src="static/public/send.svg" alt="" />
+          <img src="/public/send.svg" alt="" />
         </button>  
         
         
