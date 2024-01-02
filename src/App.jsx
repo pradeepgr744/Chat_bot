@@ -73,6 +73,7 @@ const Chatbot = () => {
           </label></div>
       </header>
 
+      
 
       <div className="conversation-area overflow-y-auto h-[300px] w-[100%] flex-grow ">
         {messages.map((message, index) => (
@@ -84,14 +85,14 @@ const Chatbot = () => {
             <button onClick={copy}
               className="flex justify-end w-[100%]"
             ><img src="/static/images/copy_icon.svg" alt="" /></button>
-            <pre ref={ref} className="overflow-y-auto">
+            <pre ref={ref[index]} className="overflow-y-auto">
               <TypeAnimation
               cursor={false}
               sequence=
               {[message.parts]}
 
               wrapper="span"
-              speed={{ type: 'keyStrokeDelayInMs', value: 30 }}
+              speed={100}
               style={{ whiteSpace: 'pre-line' }}
             /></pre>
           </div>
